@@ -4,9 +4,8 @@
 int squareroot(double input);
 
 TEST(SquareRootTest, PositiveNos) { 
-    EXPECT_EQ (18.0, squareroot (324.0));
+    EXPECT_EQ (4, squareroot (16));
 }
- 
  
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
