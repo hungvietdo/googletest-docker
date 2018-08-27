@@ -12,7 +12,7 @@ RUN git clone -q https://github.com/google/googletest.git /googletest \
 
 RUN cd /googletest/googletest && ar -rv libgtest.a gtest-all.o
 
-# A work-around to create an alias excutable file
+# A work-around to create an alias executable command
 RUN echo '#! /bin/sh'                >> /bin/mygoogletest
 RUN echo "myexec='my_googletest'" >> /bin/mygoogletest
 RUN echo 'g++ -isystem /googletest/googletest/include/ -pthread "$@" /googletest/googletest/libgtest.a -o $myexec' >> /bin/mygoogletest
