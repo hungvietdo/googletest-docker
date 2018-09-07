@@ -1,7 +1,7 @@
 FROM alpine:3.6
 
 # Install basic stuff
-RUN apk add --no-cache -q -f git cmake make g++ vim
+RUN apk add --no-cache -q -f git cmake make g++ vim boost-dev
 
 # Clone and install goolgetest
 RUN git clone -q https://github.com/google/googletest.git /googletest \
